@@ -4,9 +4,10 @@ import numpy as np
 import pickle as pkl
 import geihdanepy as geih
 
+
 df1= geih.datos(2021,'junio','Caracteristicas','Cabecera')
 df2= geih.datos(2021,'junio','Ocupados','Cabecera')
-
+df3= pd.read_cvs("./data4.cvs")
 st.title("Proyecto 8")
 st.subheader("Descripción suncita de las variables")
 st.write(""" "INGLABO" = Ingresos Laborales """)
