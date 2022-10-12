@@ -43,13 +43,13 @@ P6800 = st.number_input("Tiempo que trabaja normalmente (en hora a la semana)")
 P6585S1 = st.selectbox('Subsidio de alimentos:',('Si','No',"no sabe))
 P6585S1 = 1 if P6585S1 == 'Si' else 0
 
-P6585S2 = st.selectbox('Subsidio de transporte:',('Si','No',"no sabe))
+P6585S2 = st.selectbox('Subsidio de transporte:',('Si','No',"no sabe"))
 P6585S2 = 1 if P6585S2 == 'Si' else 0
                                                   
-P6585S3 = st.selectbox('Subsidio de familiar:',('Si','No',"no sabe))
+P6585S3 = st.selectbox('Subsidio de familiar:',('Si','No',"no sabe"))
 P6585S3 = 1 if P6585S3 == 'Si' else 0
                                                 
-P6585S4 = st.selectbox('Subsidio de auxilio:',('Si','No',"no sabe))
+P6585S4 = st.selectbox('Subsidio de auxilio:',('Si','No',"no sabe"))
 P6585S4 = 1 if P6585S4 == 'Si' else 0
                                                  
 
