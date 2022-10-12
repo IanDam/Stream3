@@ -7,7 +7,7 @@ import geihdanepy as geih
 
 df1= geih.datos(2021,'junio','Caracteristicas','Cabecera')
 df2= geih.datos(2021,'junio','Ocupados','Cabecera')
-df3= pd.read_cvs("./data4.cvs")
+df3= pd.read_csv("./data4.csv")
 st.title("Proyecto 8")
 st.subheader("Descripción suncita de las variables")
 st.write(""" "INGLABO" = Ingresos Laborales """)
