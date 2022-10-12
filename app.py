@@ -24,7 +24,7 @@ st.write(""" "P6585S4"=Discreta Numerica información sobre si recibio el mes pa
 st.subheader("Gráficas relevantes")
 
 st.image("./4/1.png")
-st.image("./2/2.png")
+st.image("./4/2.png")
 
 st.write("prediccion")
 
