@@ -40,7 +40,7 @@ P6070 = 1 if P6070 == 'Casado' else 0
 ESC = st.number_input('Ingrese sus años de escolaridad')
 P6426 = st.number_input("Tiempo que lleva trabajando en su lugar de trabajo (en meses)")
 P6800 = st.number_input("Tiempo que trabaja normalmente (en hora a la semana)")
-P6585S1 = st.selectbox('Subsidio de alimentos:',('Si','No',"no sabe))
+P6585S1 = st.selectbox('Subsidio de alimentos:',('Si','No',"no sabe"))
 P6585S1 = 1 if P6585S1 == 'Si' else 0
 
 P6585S2 = st.selectbox('Subsidio de transporte:',('Si','No',"no sabe"))
