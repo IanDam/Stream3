@@ -26,7 +26,7 @@ st.subheader("Gráficas relevantes")
 st.image("./4/1.png")
 st.image("./4/2.png")
 
-st.write("prediccion")
+st.write("""prediccion""")
 
 
 jefe_de_hogar = 1 if jefe_de_hogar == 'jefe de hogar' else 0
