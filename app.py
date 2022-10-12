@@ -24,4 +24,4 @@ st.write(""" "P6585S3"= Discreta Numerica información sobre si recibio el mes p
 st.write(""" "P6585S4"=Discreta Numerica información sobre si recibio el mes pasado subsidio o auxilio de educación 1 Sí 2 No 9 No sabe, no informa""")
 
 st.subheader("Gráficas relevantes")
-st.image(" "
+
