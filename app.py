@@ -28,7 +28,7 @@ st.image("./4/2.png")
 
 st.write("""prediccion""")
 
-if jefe_de_hogar = "jefe del hogar" :
+if jefe_de_hogar == "jefe del hogar" :
   jefe_hogar == 1
   else 0
 jefe_de_hogar = 1 if jefe_de_hogar == 'jefe del hogar' else 0
