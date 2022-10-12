@@ -55,14 +55,13 @@ P6585S4 = 1 if P6585S4 == 'Si' else 0
 
 st.subheader("""Modelo """)
 
-clsr_pickle8 = open('clsr_proyecto8.pickle','rb')
-clsr = pkl.load(clsr_pickle8)
-print(clsr)
+rf_cls_pickle8= open('rf_clsproyecto9.pickle','rb')
+rf_cls = pkl.load(rf_cls_pickle8)
+print(rf_cls)
 
-datos= [Gender,Marital_Status,Customer_Age,Education_Level,Months_on_book,Income_Category,Card_Category,Total_Relationship_Count,Months_Inactive_12_mon,
-Credit_Limit,Total_Revolving_Bal,Avg_Open_To_Buy,Total_Amt_Chng_Q4_Q1,Total_Trans_Amt,Total_Trans_Ct,Total_Ct_Chng_Q4_Q1,Avg_Utilization_Ratio]
+datos= [P6020,P6040,P6070,ESC,P6426,P6800,P6585S1,P6585S2,P6585S4]
 
-prediction = clsr.predict([np.array(datos).reshape(1,-1)][0])[0]
+prediction = rf_cls.predict([np.array(datos).reshape(1,-1)][0])[0]
 
-resultado = 'Existing customer' if prediction ==1 else 'Attrited Customer'
+resultado = presiction
 st.write(resultado)
