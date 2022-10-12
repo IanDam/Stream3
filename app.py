@@ -29,3 +29,45 @@ st.image("./4/1.png")
 st.image("./2/2.png")
 
 st.write("prediccion")
+
+
+jefe de hogar = 1 if jefe de hogar == 'jefe de hogar' else 0
+jefe de hogar = st.selectbox('Relacion:',("Jefe del hogar","Pareja", "esposo(a)", "cónyuge"," compañero(a)","Hijo(a)", "hijastro(a)","Nieto(a)", "Otro pariente"," f. Empleado(a) del servicio doméstico y sus parientes","Pensionista","Trabajador","Otro no pariente"))
+Customer_Age =st.number_input('Ingrese su Edad')
+
+
+Gender = 1 if Gender == 'Masculino' else 0
+
+Education_Level = st.number_input('Ingrese su nivel educativo:(Si este es  ingrese 0, si este es secundaria ingrese 1, si este es universitario ingrese 2, si usted es graduado ingrese 3, si tiene un postgrado ingrese 4 y si tiene un doctorado ingrese 5, si se desconoce ingrese 6)')
+
+Marital_Status = st.selectbox('Estado Civil:',('Casado','Soltero'))
+
+Marital_Status = 1 if Marital_Status == 'Casado' else 0
+
+Income_Category= st.number_input('Categoría de ingresos:(Si se desconoce ingrese 0, si es menor a $40K ingrese 1, si se encuentra entre $40K - $60K ingrese 2,si se encunetra entre $60K - $80K ingrese 3, si se encunetra entre $80K - $120K ingrese 4, si es de $120K o mayor ingrese 5)')
+Card_Category = st.number_input('Tipo de tarjeta(Si es Azul ingrese 0, si es dorada ingrese 1, si es plata ingrese 2 y si es platino ingrese 3)')
+Months_on_book = st.number_input('Duración de la relación con el banco')
+Total_Relationship_Count = st.number_input('Número total de productos')
+Months_Inactive_12_mon= st.number_input('Número de meses de inactividad')
+Credit_Limit = st.number_input('Límite de crédito')
+Total_Revolving_Bal = st.number_input('Saldo rotativo total')
+Avg_Open_To_Buy = st.number_input('Línea de crédito abierta a la compra (media de los últimos 12 meses)')
+Total_Amt_Chng_Q4_Q1 = st.number_input('Variación del importe de las transacciones(cuarto trimestre sobre primer trimestre)')
+Total_Trans_Amt = st.number_input('Cantidad total de las transacciones(12 meses)')
+Total_Trans_Ct = st.number_input('Recuento de transacciones')
+Total_Ct_Chng_Q4_Q1 = st.number_input('Cambio en el recuento de transacciones')
+Avg_Utilization_Ratio =  st.number_input('Utilización promedio de la tarjeta')
+
+st.subheader("""Modelo """)
+
+clsr_pickle8 = open('clsr_proyecto8.pickle','rb')
+clsr = pkl.load(clsr_pickle8)
+print(clsr)
+
+datos= [Gender,Marital_Status,Customer_Age,Education_Level,Months_on_book,Income_Category,Card_Category,Total_Relationship_Count,Months_Inactive_12_mon,
+Credit_Limit,Total_Revolving_Bal,Avg_Open_To_Buy,Total_Amt_Chng_Q4_Q1,Total_Trans_Amt,Total_Trans_Ct,Total_Ct_Chng_Q4_Q1,Avg_Utilization_Ratio]
+
+prediction = clsr.predict([np.array(datos).reshape(1,-1)][0])[0]
+
+resultado = 'Existing customer' if prediction ==1 else 'Attrited Customer'
+st.write(resultado)
