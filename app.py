@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle as pkl
-import geihdanepy as geih
+
 
 df1= pd.read_csv("./data4.csv")
 st.title("Proyecto 8")
