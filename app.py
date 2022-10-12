@@ -31,8 +31,8 @@ st.image("./2/2.png")
 st.write("prediccion")
 
 
-jefe de hogar = 1 if jefe de hogar == 'jefe de hogar' else 0
-jefe de hogar = st.selectbox('Relacion:',("Jefe del hogar","Pareja", "esposo(a)", "cónyuge"," compañero(a)","Hijo(a)", "hijastro(a)","Nieto(a)", "Otro pariente"," f. Empleado(a) del servicio doméstico y sus parientes","Pensionista","Trabajador","Otro no pariente"))
+jefe_de_hogar = 1 if jefe_de_hogar == 'jefe de hogar' else 0
+jefe_de_hogar = st.selectbox('Relacion:',("Jefe del hogar","Pareja", "esposo(a)", "cónyuge"," compañero(a)","Hijo(a)", "hijastro(a)","Nieto(a)", "Otro pariente"," f. Empleado(a) del servicio doméstico y sus parientes","Pensionista","Trabajador","Otro no pariente"))
 Customer_Age =st.number_input('Ingrese su Edad')
 
 
